@@ -1,0 +1,158 @@
+<style>
+/*
+  ========================================
+  Reset
+  ========================================
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*
+  ========================================
+  Basic
+  ========================================
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #19161e;
+  color: #fff;
+}
+
+
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+.container {
+  padding: 2.5rem 2rem;
+}
+
+
+/*
+  ========================================
+  Component
+  ========================================
+*/
+
+.mac-terminal {
+  background-color: #000;
+  border-radius: 5px;
+  width: 70rem;
+  height: 50rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  padding: 0 1.4rem;
+}
+.header__op{display: flex; align-items: center;}
+.header__op-icon{width: 1.4rem; height: 1.4rem; border-radius: 50%;}
+.header__op-icon:not(:last-child){margin-right: .7rem;}
+.header__op-icon--red{background-color: #FF544D; border: 1px solid #DA3C37;}
+.header__op-icon--yellow{background-color: #FFB429; border: 1px solid #F0A318;}
+.header__op-icon--green{background-color: #25C63A; border: 1px solid #12A025;}
+.header__title{color: #fff; font-family: 'Open Sans', sans-serif; font-size: 1.2rem;}
+.header__empty{width: 5.6rem;}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.body {
+  font-size: 1.3rem;
+}
+.body__row{margin-top: 1.3rem;
+    line-height: 1.7rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;}
+.body__row-arrow{width: .8rem;
+      height: .6rem;
+      background-color: #40E800;
+      clip-path: polygon(0% 30%, 60% 30%, 60% 0%, 100% 50%, 60% 100%, 60% 70%, 0% 70%);
+      margin-right: .9rem;}
+.body__row-folder{color: #56F2E6;
+      margin-right: 1rem;}
+.body__row-git--label{color: #2D9CDB;}
+.body__row-git--branch{color: #EB5757;}
+.body__row-git--branch-detail{color: #F2C94C;}
+.body__row-git--branch-time{color: #27AE60;}
+.body__row-git--author{color: #2D9CDB;}
+.body__row-result{margin-left: 1rem;}
+input {caret-color:#bb6bd9; border: none; background: transparent; color:#ffffff; outline: none; width: 40ex; }
+form{margin:0; padding:0;}
+
+
+
+</style>
+
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="mac-terminal">
+            <div class="header">
+                <div class="header__op">
+                <span class="header__op-icon header__op-icon--red"></span>
+                <span class="header__op-icon header__op-icon--yellow"></span class="header__op-icon header__op-icon--yellow">
+                <span class="header__op-icon header__op-icon--green"></span>
+                </div>
+                <div class="header__title">root@Section_3:~/Sprint_3/Project</div>
+                <div class="header__empty"></div>
+            </div>
+            <div class="body">
+                <div class="body__row">
+                    <span class="body__row-arrow"></span>
+                    <span class="body__row-folder">codestates</span>
+                    <span class="body__row-git--label">project</span>
+                    <span class="body__row-git--label">(</span>
+                    <span class="body__row-git--branch">SearchKeyword</span>
+                    <span class="body__row-git--label">)</span>
+                    <span class="body__row-result">
+                    
+                        <form method="POST" accept-charset="utf-8" action="/result/">
+                            <input type="text" name="keyword" autocomplete="off" autofocus>
+                            <button type="submit" style="display: contents;">확인</button>
+                        </form>
+
+                    </span>
+                    <span class="body__row-cursor"></span>
+                </div>          
+            </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
